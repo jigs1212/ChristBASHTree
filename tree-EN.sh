@@ -27,13 +27,13 @@ tput sgr0; tput setaf 3
 for ((i=1; i<=2; i++))
 {
     tput cup $((lin++)) $c
-    echo 'mWm'
+    echo 'GMAS'
 }
 new_year=$(date +'%Y')
 let new_year++
 tput setaf 1; tput bold
-tput cup $lin $((c - 6)); echo MERRY CHRISTMAS
-tput cup $((lin + 1)) $((c - 10)); echo And lots of CODE in $new_year
+tput cup $lin $((c - 11)); echo MERRY CHRISTMAS GMAS TEAM
+tput cup $((lin + 1)) $((c - 12)); echo And lots of SUCCESS in $new_year
 let c++
 k=1
 
@@ -58,9 +58,9 @@ while true; do
         color=$(((color+1)%8))
         # Flashing text
         sh=1
-        for l in C O D E
+        for l in S U C C E S S
         do
-            tput cup $((lin+1)) $((c+sh))
+            tput cup $((lin+1)) $((c+sh - 2))
             echo $l
             let sh++
             sleep 0.01
